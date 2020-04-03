@@ -26,4 +26,17 @@ func main() {
 	// single line multiple assignment
 	r, im := real(result), imag(result) // pull out the real and imaginary numbers
 	fmt.Println(r, im)
+
+	// Pointers
+	// Pointers is a datatype that stores the address of an variable in memory
+	// * - dereferencing
+	var firstName *string = new(string)
+	*firstName = "Noble"
+	fmt.Println(*firstName)
+
+	// & (address of) operator
+	str := "Obioma"
+
+	lastName := &str
+	fmt.Println(lastName)
 }
