@@ -18,4 +18,12 @@ func main() {
 	// implicit initialization syntax
 	isTrue := false
 	fmt.Println(isTrue)
+
+	// complex data type
+	result := complex(2, 3)
+	fmt.Println(result)
+
+	// single line multiple assignment
+	r, im := real(result), imag(result) // pull out the real and imaginary numbers
+	fmt.Println(r, im)
 }
