@@ -9,6 +9,20 @@ type User struct {
 
 // creating a variable block
 var (
-	user   []*User // a slice to hold user pointers
+	users  []*User // a slice to hold user pointers
 	nextID = 1
 )
+
+// GetUsers return all users
+func GetUsers() []*User {
+	return users
+}
+
+// AddUser add a new user to users slice passing the user object
+func AddUser(user User) (User, error) {
+	user.ID = nextID
+	nextID++
+	users = append(users, user)
+
+	return user, nil
+}
