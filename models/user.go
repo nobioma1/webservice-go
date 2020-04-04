@@ -1,7 +1,14 @@
 package models
 
+// User struct
 type User struct {
 	ID        int
-	firstName string
-	lastName  string
+	FirstName string
+	LastName  string
 }
+
+// creating a variable block
+var (
+	user   []*User // a slice to hold user pointers
+	nextID = 1
+)
