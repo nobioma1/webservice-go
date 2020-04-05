@@ -22,7 +22,7 @@ func GetUsers() []*User {
 func AddUser(user User) (User, error) {
 	user.ID = nextID
 	nextID++
-	users = append(users, user)
+	users = append(users, &user)
 
 	return user, nil
 }
